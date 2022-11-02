@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomListViewItem extends StatelessWidget {
@@ -6,17 +7,23 @@ class CustomListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+     
       child: AspectRatio(
         aspectRatio: 2.7 / 4,
         child: Container(
+             
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             color: Colors.red,
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://th.bing.com/th/id/R.6012ab1192ac6d9129c551950494f4d0?rik=Oddtd%2foH69ieyw&pid=ImgRaw&r=0',
+              
+              image: AssetImage(
+                AssetsData.book3,
+                
               ),
+              
               fit: BoxFit.fill,
+              
             ),
           ),
         ),
